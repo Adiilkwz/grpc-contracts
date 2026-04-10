@@ -35,9 +35,9 @@ jobs:
       run: |
         export PATH="$PATH:$(go env GOPATH)/bin"
         # Compile Payment Contract
-        protoc -I=repo-a/proto --go_out=repo-b --go_opt=module=github.com/Adiilkwz/grpc-generated-go --go-grpc_out=repo-b --go-grpc_opt=module=github.com/YOUR_GITHUB_USERNAME/grpc-generated-go repo-a/proto/payment/v1/payment.proto
+        protoc -I=repo-a/proto --go_out=repo-b --go_opt=module=github.com/Adiilkwz/grpc-generated-go --go-grpc_out=repo-b --go-grpc_opt=module=github.com/Adiilkwz/grpc-generated-go repo-a/proto/payment/v1/payment.proto
         # Compile Order Stream Contract
-        protoc -I=repo-a/proto --go_out=repo-b --go_opt=module=github.com/Adiilkwz/grpc-generated-go --go-grpc_out=repo-b --go-grpc_opt=module=github.com/YOUR_GITHUB_USERNAME/grpc-generated-go repo-a/proto/order/v1/order_stream.proto
+        protoc -I=repo-a/proto --go_out=repo-b --go_opt=module=github.com/Adiilkwz/grpc-generated-go --go-grpc_out=repo-b --go-grpc_opt=module=github.com/Adiilkwz/grpc-generated-go repo-a/proto/order/v1/order_stream.proto
 
     - name: Push to Repo B
       run: |
